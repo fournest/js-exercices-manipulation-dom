@@ -1,3 +1,9 @@
 const bouton = document.getElementById(`deleteBtn`);
-const articlesListe = document.getElementById(`articles`);
-bouton.addEventListener("click", remove );
+
+bouton.addEventListener("click", function () {
+    const articlesListe = document.getElementById(`articles`);
+
+    if (articlesListe && articlesListe.lastElementChild) {
+        articlesListe.removeChild(articlesListe.lastElementChild);
+    }
+});
